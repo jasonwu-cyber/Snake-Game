@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE_PROTOCOL // System Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slide">
+        <!-- Header -->
+        <header class="header">
+            <div class="title-group">
+                <h1 class="main-title">SIGNAL_ROUTING_PROTOCOL</h1>
+                <div class="sub-title">SYS.VER. 1.0.4 // NODE_CONNECTIVITY_TEST</div>
+            </div>
+            <div class="pcb-lines">
+                <svg width="200" height="50" viewBox="0 0 200 50">
+                    <path d="M 10 40 L 40 40 L 50 30 L 190 30" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+                    <circle cx="190" cy="30" r="4" fill="#CBD5E1"/>
+                    <path d="M 30 50 L 60 50 L 70 40 L 160 40" fill="none" stroke="#CBD5E1" stroke-width="2"/>
+                    <circle cx="160" cy="40" r="3" fill="#CBD5E1"/>
+                    <path d="M 0 20 L 20 20 L 30 10 L 120 10" fill="none" stroke="#94A3B8" stroke-width="1"/>
+                    <circle cx="120" cy="10" r="2" fill="#94A3B8"/>
+                </svg>
+            </div>
+        </header>
+
+        <!-- Top Area: Main Values -->
+        <section class="top-data">
+            <div class="data-card">
+                <div class="data-label">ACTIVE_NODES</div>
+                <div class="data-value" id="score">000</div>
+                <div class="data-trend">CURRENT ROUTING PERFORMANCE</div>
+            </div>
+            <div class="data-card">
+                <div class="data-label">PEAK_CAPACITY</div>
+                <div class="data-value" id="high-score">000</div>
+                <div class="data-trend">HISTORICAL MAXIMUM</div>
+            </div>
+            <div class="data-card">
+                <div class="data-label">SYS_STATUS</div>
+                <div class="data-value status-text" id="status" style="color: #64748B;">STANDBY</div>
+                <div class="data-trend" id="status-desc">AWAITING INITIALIZATION</div>
+            </div>
+        </section>
+
+        <!-- Middle Area: Canvas -->
+        <section class="middle-chart">
+            <div class="side-detail left">
+                <div class="detail-line"></div>
+                <div class="detail-text">NODE GRID // 40x17</div>
+                <div class="detail-line"></div>
+            </div>
+            
+            <div class="canvas-wrapper">
+                <div class="canvas-decor top-left"></div>
+                <div class="canvas-decor bottom-right"></div>
+                <canvas id="gameCanvas"></canvas>
+            </div>
+            
+            <div class="side-detail right">
+                <div class="detail-box">SEQ</div>
+                <div class="detail-box">RTG</div>
+                <div class="detail-box">SYS</div>
+            </div>
+        </section>
+
+        <!-- Bottom Area: Controls & Notes -->
+        <footer class="bottom-notes">
+            <div class="notes-content">
+                <div class="note-item">
+                    <strong>INPUT_METHOD:</strong> KEYBOARD_ARROWS (↑ ↓ ← →)
+                </div>
+                <div class="note-item">
+                    <strong>OBJECTIVE:</strong> ROUTE SIGNAL TRACE TO TARGET NODES WITHOUT SELF-INTERSECTION OR BOUNDARY COLLISION.
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="cyber-button">INITIALIZE_ROUTING</button>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
